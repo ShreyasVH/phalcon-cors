@@ -12,7 +12,9 @@ class CorsMiddleware implements MiddlewareInterface
         $allowedOrigins = [
             'https://http-client.react.com',
             'https://http-client.vue.com',
-            'https://http-client.angular.com'
+            'https://http-client.angular.com',
+            'https://http-client.sveltekit.com',
+            'https://http-client.solid.com'
         ];
         $origin = $app->request->getHeader('Origin');
         if (in_array($origin, $allowedOrigins)) {

@@ -14,10 +14,6 @@ $default->put('/api', 'putAction');
 $default->delete('/api', 'deleteAction');
 
 $default->options('/{params:[a-zA-Z0-9\/]+}', function () use ($application) {
-    $application->response->setHeader('Access-Control-Allow-Origin', '*')
-        ->setHeader('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS')
-        ->setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
-        ->sendHeaders();
 });
 
 $application->mount($default);
